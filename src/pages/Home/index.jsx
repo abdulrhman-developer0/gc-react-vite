@@ -1,6 +1,6 @@
 import HeroSection from "./HeroSection";
 
-export default function Home() {
+function Home() {
   return (
     <>
       <HeroSection />
@@ -8,3 +8,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;

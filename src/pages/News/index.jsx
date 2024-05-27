@@ -1,3 +1,4 @@
+import useAxios from "../../hoocks/useAxios";
 import { useState } from "react";
 import BlogPost from "./BlogPost";
 
@@ -20,12 +21,17 @@ export default function News() {
     },
   ]);
 
+  const axios = useAxios();
+  axios.get("/blog").then((d) => {
+    console.log(d);
+  });
+
   return (
     <>
       <h1>News page render form News/index.jsx</h1>
 
       <div>
-        {News.map((post, key) => {
+        {news.map((post, key) => {
           return (
             <BlogPost
               key={key}
